@@ -1,0 +1,89 @@
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  /* Creates the main vertical line */
+  /* We use a pseudo-element on the list itself */
+  ::before {
+    content: "";
+    position: absolute;
+    left: 4px; /* Aligns with the center of the dot */
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: var(--border-color);
+  }
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative; /* For the dot */
+  padding-bottom: 24px;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-text);
+  border-radius: 50%;
+  position: relative;
+  top: 6px; /* Aligns dot with first line of text */
+  flex-shrink: 0;
+  z-index: 1; /* Sits on top of the main line */
+}
+
+/* First dot is active/blue */
+.timeline-item:first-child .timeline-dot {
+  background-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+}
+
+.timeline-content {
+  flex-grow: 1;
+}
+
+.timeline-role {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin: 0 0 2px 0;
+}
+
+.timeline-company {
+  font-size: 14px;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.timeline-year {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--secondary-text);
+  background-color: var(--button-bg-community);
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Dark mode timeline */
+body.dark-mode .timeline::before {
+  background-color: var(--border-color);
+}
+body.dark-mode .timeline-dot {
+  background-color: #555;
+}
+body.dark-mode .timeline-item:first-child .timeline-dot {
+  background-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+body.dark-mode .timeline-year {
+  background-color: #222;
+  border-color: var(--border-color);
+  color: #ccc;
+}

@@ -1,34 +1,36 @@
 import React from "react";
-// import { Card } from './Card'; // Removed this import to fix the error
-// import { HiOutlineUser } from 'react-icons/hi'; // Removed this import to fix the error
+import "../styles/About.css";
+import { FaRegUser } from "react-icons/fa"; // Icon for "About"
 
-export const About = () => {
+const About = () => {
   return (
-    // Inlined 'Card' component structure
-    <section className="bg-card border border-border rounded-xl shadow-sm">
-      {/* Inlined Card Header */}
-      <div className="flex items-center justify-between p-5 sm:p-6 border-b border-border">
-        <div className="flex items-center gap-3">
-          {/* Icon was here, removed for now to fix build */}
-          <h2 className="text-lg font-bold text-text-primary">About</h2>
-        </div>
-      </div>
-
-      {/* Inlined Card Body */}
-      <div className="p-5 sm:p-6">
-        <div className="space-y-4 text-text-secondary text-base">
-          <p>
-            Hello! I'm Jethro. I'm a full-stack developer specializing in React,
-            Firebase, and NodeJS. I'm passionate about building modern web
-            applications that solve real-world problems.
-          </p>
-          <p>
-            My goal is to leverage technology to create efficient and scalable
-            solutions, from community projects like animal rescue platforms to
-            robust digital tools for businesses.
-          </p>
-        </div>
+    <section className="content-card about-section">
+      <h2 className="card-heading">
+        <FaRegUser /> About
+      </h2>
+      <div className="about-content">
+        <p>
+          I'm a full-stack software engineer specializing in developing
+          solutions with JavaScript, Python, and PHP. I work on projects
+          including building modern web applications, mobile apps, search engine
+          optimization, digital marketing, and making code tutorials.
+        </p>
+        <p>
+          I've helped startups and MSMEs grow and streamline their processes
+          through software solutions. I've also built a community of over
+          200,000 developers sharing knowledge and mentorship.
+        </p>
+        <p>
+          Lately, I've been diving deeper into the world of artificial
+          intelligence, focusing on integrating AI tools and techniques into
+          modern applications. My work now includes developing AI-powered
+          solutions, creating intelligent applications, and leveraging
+          generative AI to optimize development workflows and deliver
+          cutting-edge technology.
+        </p>
       </div>
     </section>
   );
 };
+
+export default About;

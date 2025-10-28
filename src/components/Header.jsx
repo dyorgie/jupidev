@@ -83,11 +83,6 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
               </label>
             </button>
           </div>
-          <button className="hackathon-badge">
-            <IoMdTrophy />
-            <span>DICT OpenGov Hackathon 2025 Champion</span>
-            <MdKeyboardArrowDown />
-          </button>
           <a
             href="https://discord.gg/uPekWkD5Hx"
             target="_blank"

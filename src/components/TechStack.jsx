@@ -1,53 +1,58 @@
 import React from "react";
-import { Card } from "./Card";
-import { HiOutlineChip } from "react-icons/hi";
+import "../styles/TechStack.css";
+import { HiOutlineChip } from "react-icons/hi"; // Icon for "Tech Stack"
+import { MdChevronRight } from "react-icons/md";
 
-// A simple component for styling the tech tags
-const TechTag = ({ children }) => (
-  <span className="bg-tag text-text-primary text-sm font-medium px-3 py-1.5 rounded-lg">
-    {children}
-  </span>
-);
+const TechStack = () => {
+  // You can later make this data dynamic
+  const tech = {
+    frontend: ["JavaScript", "React", "Vue.js", "Tailwind CSS"],
+    backend: ["Node.js", "Python", "PHP", "Laravel", "PostgreSQL", "MongoDB"],
+    projectmanagement: ["Jira", "Trello", "Notion", "Slack"],
+  };
 
-export const TechStack = () => {
   return (
-    <Card title="Tech Stack" icon={<HiOutlineChip />} cta="View All">
-      <div className="space-y-6">
-        <div>
-          <h3 className="text-base font-semibold text-text-primary mb-3">
-            Frontend
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            <TechTag>React</TechTag>
-            <TechTag>Vite</TechTag>
-            <TechTag>Tailwind CSS</TechTag>
-            <TechTag>JavaScript</TechTag>
-            <TechTag>HTML</TechTag>
-            <TechTag>CSS</TechTag>
-          </div>
-        </div>
-        <div>
-          <h3 className="text-base font-semibold text-text-primary mb-3">
-            Backend
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            <TechTag>NodeJS</TechTag>
-            <TechTag>Firebase</TechTag>
-            <TechTag>PHP</TechTag>
-            <TechTag>MySQL</TechTag>
-          </div>
-        </div>
-        <div>
-          <h3 className="text-base font-semibold text-text-primary mb-3">
-            Other
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            <TechTag>PowerBI</TechTag>
-            <TechTag>Git</TechTag>
-            <TechTag>Kotlin</TechTag>
-          </div>
+    <section className="content-card tech-stack-section">
+      <div className="card-header-split">
+        <h2 className="card-heading">
+          <HiOutlineChip /> Tech Stack
+        </h2>
+      </div>
+
+      <div className="stack-group">
+        <h3>Frontend</h3>
+        <div className="tech-tags">
+          {tech.frontend.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
-    </Card>
+
+      <div className="stack-group">
+        <h3>Backend</h3>
+        <div className="tech-tags">
+          {tech.backend.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="stack-group">
+        <h3>Project Management</h3>
+        <div className="tech-tags">
+          {tech.projectmanagement.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
+
+export default TechStack;

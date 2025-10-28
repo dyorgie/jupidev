@@ -1,50 +1,52 @@
 import React from "react";
-import { Card } from "./Card";
-import { HiOutlineBriefcase } from "react-icons/hi";
+import "../styles/Experience.css";
+import { MdOutlineWorkOutline } from "react-icons/md"; // Icon for "Experience"
 
-// This is a single item in the timeline
-const ExperienceItem = ({ title, company, date, isLast = false }) => {
+// You can move this data to a separate file later
+const experienceData = [
+  {
+    role: "BS Computer Science",
+    company: "CIIT College of Arts and Technology",
+    year: "2022",
+  },
+  {
+    role: "Software Developer",
+    company: "Felta Multimedia Inc.",
+    year: "2022",
+  },
+  {
+    role: "Technical-Vocational-Livelihood Strand - Software Development",
+    company: "iACADEMY",
+    year: "2020",
+  },
+  {
+    role: "Hello World!",
+    company: "Wrote my first line of code",
+    year: "2017",
+  },
+];
+
+const Experience = () => {
   return (
-    <li className="flex gap-4">
-      {/* --- The Gutter (Dot and Line) --- */}
-      <div className="flex flex-col items-center">
-        {/* The Dot */}
-        <div className="flex-shrink-0 w-4 h-4 mt-1 bg-border rounded-full" />
-        {/* The Line (don't show on last item) */}
-        {!isLast && <div className="w-px flex-grow bg-border" />}
-      </div>
+    <section className="content-card experience-section">
+      <h2 className="card-heading">
+        <MdOutlineWorkOutline /> Experience
+      </h2>
 
-      {/* --- The Content --- */}
-      <div className="flex-1 pb-8">
-        <div className="flex justify-between items-start">
-          <div>
-            <h3 className="text-base font-medium text-text-primary">{title}</h3>
-            <p className="text-sm text-text-secondary">{company}</p>
-          </div>
-          <span className="text-xs text-text-secondary whitespace-nowrap pt-1">
-            {date}
-          </span>
-        </div>
-      </div>
-    </li>
-  );
-};
-
-// The main Experience card component
-export const Experience = ({ data = [] }) => {
-  return (
-    <Card title="Experience" icon={<HiOutlineBriefcase />}>
-      <ul>
-        {data.map((item, index) => (
-          <ExperienceItem
-            key={index}
-            title={item.title}
-            company={item.company}
-            date={item.date}
-            isLast={index === data.length - 1}
-          />
+      <ul className="timeline">
+        {experienceData.map((item, index) => (
+          <li key={index} className="timeline-item">
+            <div className="timeline-dot"></div>
+            <div className="timeline-content">
+              <h3 className="timeline-role">{item.role}</h3>
+              <p className="timeline-company">{item.company}</p>
+            </div>
+            <span className="timeline-year">{item.year}</span>
+          </li>
         ))}
       </ul>
-    </Card>
+    </section>
   );
 };
+
+export default Experience;
