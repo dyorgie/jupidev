@@ -5,6 +5,11 @@ import { MdOutlineWorkOutline } from "react-icons/md"; // Icon for "Experience"
 // You can move this data to a separate file later
 const experienceData = [
   {
+    role: "Mass Media Ministry Head",
+    company: "Kadang Dominiko",
+    year: "2023",
+  },
+  {
     role: "BS Computer Science",
     company: "CIIT College of Arts and Technology",
     year: "2022",
