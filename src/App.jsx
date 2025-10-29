@@ -8,6 +8,9 @@ import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import BeyondCoding from "./components/BeyondCoding";
 
+import { HiOutlineCamera } from "react-icons/hi";
+import { MdChevronRight } from "react-icons/md";
+
 // Removed: import ph100Banner from './assets/ph-100-banner.png'; // Banner import is no longer needed
 
 import "./App.css"; // Your main app styles
@@ -46,6 +49,16 @@ function App() {
           {/* Removed: </div> */}
           <Experience /> {/* Experience is now directly in the right column */}
           <BeyondCoding />
+          <a
+            href="https://instagram.com/putograjupi" // <-- SET YOUR INSTAGRAM LINK
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-button" // We will style this new class
+          >
+            <HiOutlineCamera />
+            <span>See my photography</span>
+            <MdChevronRight />
+          </a>
         </div>
       </main>
 
