@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
+import BeyondCoding from "./components/BeyondCoding";
 
 // Removed: import ph100Banner from './assets/ph-100-banner.png'; // Banner import is no longer needed
 
@@ -44,6 +45,7 @@ function App() {
           {/* Removed:   <img src={ph100Banner} alt="I am part of PH 100" /> */}
           {/* Removed: </div> */}
           <Experience /> {/* Experience is now directly in the right column */}
+          <BeyondCoding />
         </div>
       </main>
 
