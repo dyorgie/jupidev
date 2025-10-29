@@ -21,7 +21,6 @@ import { IoIosPeople } from "react-icons/io";
 const Header = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <header className="profile-header">
-      {/* This wrapper handles the main flex layout and wrapping */}
       <div className="header-content">
         {/* Column 1: Profile Image */}
         <div className="profile-image-container">
@@ -32,7 +31,6 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
           />
         </div>
 
-        {/* Column 2: Info & Primary Actions */}
         <div className="profile-info-container">
           <div className="profile-details">
             <h1>
@@ -62,7 +60,6 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
           </div>
         </div>
 
-        {/* Column 3: Secondary Actions & Badges */}
         <div className="profile-secondary-actions">
           <div className="secondary-actions-top">
             <button className="theme-toggle" aria-label="Toggle theme">
@@ -73,7 +70,6 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
                   onChange={toggleDarkMode}
                 />
                 <span className="slider round">
-                  {/* 4. Conditionally show sun or moon icon */}
                   {isDarkMode ? (
                     <MdModeNight className="switch-icon" />
                   ) : (

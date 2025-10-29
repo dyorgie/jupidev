@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/Experience.css";
 import { MdOutlineWorkOutline } from "react-icons/md"; // Icon for "Experience"
 
-// You can move this data to a separate file later
 const experienceData = [
   {
     role: "Mass Media Ministry Head",

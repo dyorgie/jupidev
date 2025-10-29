@@ -1,0 +1,145 @@
+/* --- 1. Main Section Container (for alignment) --- */
+.projects-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 24px; /* Matches the padding of the main grid */
+  box-sizing: border-box;
+}
+
+/* --- 2. Section Heading (copied from .card-heading) --- */
+.projects-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin: 0 0 20px 0;
+}
+
+.projects-heading svg {
+  font-size: 22px;
+  color: var(--secondary-text);
+}
+
+/* --- 3. The Horizontal Gallery --- */
+.projects-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* This is the magic! */
+  padding: 4px 4px 20px 4px; /* Adds space for scrollbar and shadow */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* --- 4. Individual Project Card --- */
+.project-card {
+  /* This sets a fixed width so cards don't get squished */
+  flex: 0 0 320px;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background-color: var(--card-bg, #fff); /* Re-uses card bg */
+  overflow: hidden; /* Clips the image to the border-radius */
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-image-container {
+  width: 100%;
+  height: 180px; /* Gives all images a uniform height */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the space nicely */
+}
+
+.project-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Makes card content fill the space */
+}
+
+.project-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin: 0 0 8px 0;
+}
+
+.project-content p {
+  font-size: 14px;
+  color: var(--secondary-text);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  flex-grow: 1; /* Pushes the tech tags to the bottom */
+}
+
+/* --- 5. Tech Tags (copied from TechStack.css) --- */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: var(--button-bg-community);
+  color: var(--secondary-text);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* --- 6. Dark Mode Styles --- */
+body.dark-mode .project-card {
+  background-color: var(--card-bg, #111);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .tech-tag {
+  background-color: #222;
+  border-color: var(--border-color);
+  color: #ccc;
+}
+
+/* --- 7. Fancy Scrollbar (Optional but nice) --- */
+.projects-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+.projects-gallery::-webkit-scrollbar-track {
+  background: var(--button-bg-community, #f5f5f7);
+  border-radius: 10px;
+}
+.projects-gallery::-webkit-scrollbar-thumb {
+  background: var(--border-color, #d2d2d7);
+  border-radius: 10px;
+}
+body.dark-mode .projects-gallery::-webkit-scrollbar-track {
+  background: #222;
+}
+body.dark-mode .projects-gallery::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* --- 8. Responsive (for small screens) --- */
+@media (max-width: 600px) {
+  .projects-section {
+    padding: 0 16px; /* Match mobile padding */
+  }
+
+  .project-card {
+    flex: 0 0 280px; /* Make cards a bit smaller on mobile */
+  }
+}
