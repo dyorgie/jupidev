@@ -7,6 +7,7 @@ import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import BeyondCoding from "./components/BeyondCoding";
+import Projects from "./components/Projects";
 
 import { HiOutlineCamera } from "react-icons/hi";
 import { MdChevronRight } from "react-icons/md";
@@ -61,6 +62,7 @@ function App() {
           </a>
         </div>
       </main>
+      <Projects />
 
       <Footer />
     </div>
