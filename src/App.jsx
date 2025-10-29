@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+
+// Import all your components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import TechStack from "./components/TechStack";
+import Experience from "./components/Experience";
+
+// Removed: import ph100Banner from './assets/ph-100-banner.png'; // Banner import is no longer needed
+
+import "./App.css"; // Your main app styles
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkMode]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+
+      {/* This is the two-column grid */}
+      <main className="main-content-grid">
+        {/* Left Column */}
+        <div className="left-column">
+          <About />
+          <TechStack />
+        </div>
+
+        {/* Right Column */}
+        <div className="right-column">
+          {/* Removed: <div className="banner-container"> */}
+          {/* Removed:   <img src={ph100Banner} alt="I am part of PH 100" /> */}
+          {/* Removed: </div> */}
+          <Experience /> {/* Experience is now directly in the right column */}
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

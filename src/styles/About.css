@@ -1,0 +1,47 @@
+/* --- Reusable Card Base Style --- */
+/* You can put this in your main index.css if you want */
+:root {
+  --card-bg: var(--button-bg-light);
+  --card-border: var(--border-color);
+  --card-padding: 24px;
+}
+
+body.dark-mode {
+  --card-bg: #111111; /* A slightly off-black for cards */
+  --card-border: #333333;
+}
+
+.content-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: var(--card-padding);
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin: 0 0 16px 0;
+}
+
+.card-heading svg {
+  font-size: 22px;
+  color: var(--secondary-text);
+}
+/* --- End Reusable Style --- */
+
+/* Specific to About section */
+.about-content p {
+  font-size: 15px;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}

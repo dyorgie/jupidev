@@ -1,0 +1,65 @@
+/* --- Reusable Header --- */
+.card-header-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header-split .card-heading {
+  margin: 0; /* Override default heading margin */
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.view-all-link svg {
+  font-size: 20px;
+}
+/* --- End Reusable Header --- */
+
+/* Specific to Tech Stack */
+.stack-group {
+  margin-bottom: 20px;
+}
+.stack-group:last-child {
+  margin-bottom: 0;
+}
+
+.stack-group h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary-text);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: var(--button-bg-community);
+  color: var(--secondary-text);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Dark mode tags */
+body.dark-mode .tech-tag {
+  background-color: #222;
+  border-color: var(--border-color);
+  color: #ccc;
+}
