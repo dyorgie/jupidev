@@ -10,23 +10,24 @@ const About = () => {
       </h2>
       <div className="about-content">
         <p>
-          I'm a full-stack software engineer specializing in developing
-          solutions with JavaScript, Python, and PHP. I work on projects
-          including building modern web applications, mobile apps, search engine
-          optimization, digital marketing, and making code tutorials.
+          I am an aspiring Full-Stack Software Engineer with a strong passion
+          for creating innovative and impactful digital solutions using modern
+          web technologies. My current work involves developing progressive web
+          applications, designing scalable web solutions, and managing digital
+          marketing and project workflows to ensure seamless and user-centered
+          outcomes. Through these projects, I have gained hands-on experience in
+          both front-end and back-end development, as well as a deep
+          appreciation for building systems that are efficient, accessible, and
+          adaptable to real-world needs.
         </p>
         <p>
-          I've helped startups and MSMEs grow and streamline their processes
-          through software solutions. I've also built a community of over
-          200,000 developers sharing knowledge and mentorship.
-        </p>
-        <p>
-          Lately, I've been diving deeper into the world of artificial
-          intelligence, focusing on integrating AI tools and techniques into
-          modern applications. My work now includes developing AI-powered
-          solutions, creating intelligent applications, and leveraging
-          generative AI to optimize development workflows and deliver
-          cutting-edge technology.
+          Beyond web development, I am eager to deepen my knowledge in
+          Artificial Intelligence (AI) and explore how intelligent systems can
+          be integrated into applications to enhance automation,
+          personalization, and data-driven decision-making. I am continuously
+          learning and experimenting with new technologies, with the goal of
+          becoming a versatile developer capable of bridging the gap between
+          software engineering and AI innovation.
         </p>
       </div>
     </section>
