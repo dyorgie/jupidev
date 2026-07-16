@@ -10,24 +10,10 @@ const About = () => {
       </h2>
       <div className="about-content">
         <p>
-          I am an aspiring Full-Stack Software Engineer with a strong passion
-          for creating innovative and impactful digital solutions using modern
-          web technologies. My current work involves developing progressive web
-          applications, designing scalable web solutions, and managing digital
-          marketing and project workflows to ensure seamless and user-centered
-          outcomes. Through these projects, I have gained hands-on experience in
-          both front-end and back-end development, as well as a deep
-          appreciation for building systems that are efficient, accessible, and
-          adaptable to real-world needs.
+          I am an aspiring Data Engineer with a strong passion for transforming data into meaningful insights and building reliable, scalable data solutions that drive informed decision-making. My background in full-stack software development and quality assurance has provided me with hands-on experience in designing and developing web applications, testing software for quality and reliability, and creating user-centered digital solutions. These experiences have given me a solid understanding of the complete software development lifecycle and the importance of building systems that are efficient, maintainable, and impactful.
         </p>
         <p>
-          Beyond web development, I am eager to deepen my knowledge in
-          Artificial Intelligence (AI) and explore how intelligent systems can
-          be integrated into applications to enhance automation,
-          personalization, and data-driven decision-making. I am continuously
-          learning and experimenting with new technologies, with the goal of
-          becoming a versatile developer capable of bridging the gap between
-          software engineering and AI innovation.
+          Beyond software development, I am continuously expanding my expertise in data engineering, data analytics, and data science, with a growing interest in Artificial Intelligence (AI) and machine learning. I enjoy learning new technologies and exploring how data and intelligent systems can be leveraged to solve real-world problems, improve automation, and support data-driven innovation. My goal is to become a versatile technology professional who bridges software engineering, data, and AI to develop solutions that create meaningful value for businesses and communities.
         </p>
       </div>
     </section>
