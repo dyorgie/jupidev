@@ -4,17 +4,17 @@ import { MdOutlineWorkOutline } from "react-icons/md"; // Icon for "Experience"
 
 const experienceData = [
   {
-    role: "Mass Media Ministry Head",
-    company: "Kadang Dominiko",
-    year: "2023",
+    role: "Software Engineer Intern",
+    company: "WyzLab Solutions",
+    year: "2026",
   },
   {
     role: "BS Computer Science",
     company: "CIIT College of Arts and Technology",
-    year: "2022",
+    year: "2026",
   },
   {
-    role: "Software Developer",
+    role: "Software Engineer Intern",
     company: "Felta Multimedia Inc.",
     year: "2022",
   },
