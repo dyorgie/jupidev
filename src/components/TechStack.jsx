@@ -6,9 +6,12 @@ import { MdChevronRight } from "react-icons/md";
 const TechStack = () => {
   // You can later make this data dynamic
   const tech = {
-    frontend: ["JavaScript", "React", "Vue.js", "Tailwind CSS"],
-    backend: ["Node.js", "Python", "PHP", "Laravel", "PostgreSQL", "MongoDB"],
-    projectmanagement: ["Jira", "Trello", "Notion", "Slack"],
+    languages: ["Python", "SQL", "JavaScript", "TypeScript"],
+    dataanalytics: ["Pandas", "Power BI", "Microsoft Excel", "Data Visualization"],
+    frontend: ["React", "Next.js", "Tailwind CSS", "Bootstrap", "HTML5", "CSS3"],
+    backend: ["Node.js", "Supabase", "Firebase"],
+    databases: ["PostgreSQL", "MongoDB", "MySQL", "SQLite", "Firestore"],
+    tools: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Postman", "Trello", "Slack", "Notion"],
   };
 
   return (
@@ -17,6 +20,28 @@ const TechStack = () => {
         <h2 className="card-heading">
           <HiOutlineChip /> Tech Stack
         </h2>
+      </div>
+
+      <div className="stack-group">
+        <h3>Languages</h3>
+        <div className="tech-tags">
+          {tech.languages.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="stack-group">
+        <h3>Data Analytics</h3>
+        <div className="tech-tags">
+          {tech.dataanalytics.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="stack-group">
@@ -42,9 +67,20 @@ const TechStack = () => {
       </div>
 
       <div className="stack-group">
-        <h3>Project Management</h3>
+        <h3>Databases</h3>
         <div className="tech-tags">
-          {tech.projectmanagement.map((tag) => (
+          {tech.databases.map((tag) => (
+            <span key={tag} className="tech-tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="stack-group">
+        <h3>Tools</h3>
+        <div className="tech-tags">
+          {tech.tools.map((tag) => (
             <span key={tag} className="tech-tag">
               {tag}
             </span>

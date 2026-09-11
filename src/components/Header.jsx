@@ -40,8 +40,8 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
               <IoLocationSharp /> Metro Manila, Philippines
             </p>
             <p className="role">
-              Software Engineer <span className="separator">|</span>{" "}
-              Data Engineer
+              Data Analyst <span className="separator">|</span>{" "}
+              Software Engineer
             </p>
           </div>
           <div className="profile-primary-actions">

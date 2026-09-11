@@ -34,6 +34,19 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+
+              {project.githubUrl && (
+                <div className="project-cta-container">
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-cta-button"
+                  >
+                    View Repository
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}

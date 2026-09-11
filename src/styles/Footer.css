@@ -42,8 +42,8 @@
 .info-card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
+  gap: 1rem;
+  padding: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   text-decoration: none;
@@ -51,8 +51,20 @@
   font-weight: 500;
   font-size: 14px;
   transition: all 0.2s ease;
-  min-height: 48px; /* For vertical alignment */
   box-sizing: border-box; /* Include padding/border in height */
+}
+
+.card-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 600;
+}
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #666; /* or your preferred subtitle color */
 }
 
 .info-card:hover {
